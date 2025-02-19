@@ -21,7 +21,7 @@ export default class Cl_mTienda {
         return this._porcIncremento;
     }
     procesarVenta(v){
-        this.acumMontoFinal += v.costo * v.cnArticulos
+        this.acumMontoFinal += v.montoPagar();
         if(v.cnArticulos == 1){
             this.contCliente1++;
         }
@@ -33,8 +33,12 @@ export default class Cl_mTienda {
         
     }
 
+    incremento(){
+        return this.acumMontoFinal * this._porcIncremento;
+    }
+
     montoFinalCaja(){
-        return this.acumMontoFinal * this.porcIncremento;
+        return this._montoCaja + this.incremento();
     }
 
     devolverClienteMayorCompra(){

@@ -8,11 +8,34 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button id="btAgregar">Agregar venta</button>
-    <div id="salida"></div>
+    <section id="mainForm">
+      <h3>Ventas</h3>
+      <table id="mainForm_tabla">
+        
+        <tr>
+          <th>Cliente</th>
+          <th>Factura</th>
+          <th>Costo</th>
+          <th>CnArticulos</th>
+        </tr>
+      </table>
+      <h5>Monto final de la caja: Bs.<span id="mainForm_lblMontoFinalCaja">?</span></h5>
+      <h5>Cliente que pago el monto mayor: <span id="mainForm_lblDevolverClienteMayorCompra">?</span> Ventas</h5>
+      <h5>Cantidad de clientes que solo llevaron un articulo: <span id="mainForm_lblDevolverContCliente">?</span>%</h5>
+      <button id="mainForm_btAgregar">Agregar venta</button>
+    </section>
+
+    <section id="ventaForm">
+      <h3>Datos de la venta</h3>
+      <input type="text" id="ventaForm_inCliente" placeholder="Cliente"></input>
+      <input type="text" id="ventaForm_inFactura" placeholder="Factura"></input>
+      <input type="text" id="ventaForm_inCosto"  placeholder="Costo"></input>
+      <input type="text" id="ventaForm_inCnArticulos" placeholder="CnArticulos"></input>
+      <button id="ventaForm_btAceptar">Aceptar</button> 
+    </section>
   </body>
   <script type="module">
     import Cl_index from "./js/index.js";
-    new Cl_index();
-  </script>
+    new Cl_index()
+ </script>
 </html>
