@@ -34,11 +34,11 @@ export default class Cl_mTienda {
     }
 
     incremento(){
-        return this.acumMontoFinal * this._porcIncremento;
+        return this.acumMontoFinal * this.porcIncremento;
     }
 
     montoFinalCaja(){
-        return this._montoCaja + this.incremento() + this.acumMontoFinal();
+        return this._montoCaja + this.incremento() + this.acumMontoFinal;
     }
 
     devolverClienteMayorCompra(){
