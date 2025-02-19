@@ -30,7 +30,7 @@ export default class Cl_mVenta {
         return this._cnArticulos;
     }
     montoPagar(){
-        return this._costo * this._cnArticulos;
+        return this.costo * this.cnArticulos;
     }
 
 

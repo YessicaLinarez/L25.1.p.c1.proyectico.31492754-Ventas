@@ -9,7 +9,14 @@ export default class Cl_controlador {
         this.modelo.devolverClienteMayorCompra(), 
         this.modelo.devolverContCliente()
     );
+
     }
+    agregarVenta({montoCaja, porcIncremento}){
+        this.mVenta.montoCaja = montoCaja;
+        this.mVenta.porcIncremento = porcIncremento;
+    }
+
+
     
 
 }

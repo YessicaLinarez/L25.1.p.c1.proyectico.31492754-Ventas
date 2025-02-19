@@ -17,6 +17,17 @@ export default class Cl_vTienda {
         this.btAgregar.onclick = () => this.ocultar();
         this.vVenta.btAceptar.onclick = () => this.controlador.agregarVenta();
         this.mostrar();
+        this.btAceptar = document.getElementById("mainForm_btAceptar");
+
+        this.btAceptar.onclick = () =>
+            controlador.agregarTienda({
+              montoCaja: this.inMontoCaja.value,
+              porcIncremento: this.inPorcIncremento.value
+            });
+    
+          
+        /// pipipipipipipipipipipipipipipipipi
+        
     
     }
 
@@ -51,8 +62,8 @@ export default class Cl_vTienda {
          <td>${this.mVenta.cnArticulos}</td>
         </tr>`;
          this.lblMontoFinalCaja.innerHTML = montoFinalCaja;
-         this.lblDevolverClienteMayorCompra = devolverClienteMayorCompra;
-         this.lblDevolverContCliente = devolverContCliente;
+         this.lblDevolverClienteMayorCompra.innerHTML = devolverClienteMayorCompra;
+         this.lblDevolverContCliente.innerHTML = devolverContCliente;
         
     }
 
