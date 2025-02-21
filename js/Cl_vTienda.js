@@ -1,11 +1,14 @@
 import Cl_mVenta from "./Cl_mVenta.js";
 import Cl_vVenta from "./Cl_vVenta.js";
+import Cl_controlador from "./Cl_controlador.js";
 
 export default class Cl_vTienda {
-    constructor({montoCaja, porcIncremento}){
-        this.montoCaja = montoCaja;
-        this.porcIncremento = porcIncremento;
-        this.controlador = null;
+    constructor({montoCaja, porcIncremento,controlador}){
+        this.montoCaja = document.getElementById("mainForm_inMontoCaja"); 
+        this.porcIncremento =document.getElementById("mainForm_inPorcIncremento");
+
+
+        this.controlador = new Cl_controlador();
         this.mVenta = null;
         this.vVenta = new Cl_vVenta();
         this.vista = document.getElementById("mainForm");
@@ -15,18 +18,18 @@ export default class Cl_vTienda {
         this.lblDevolverClienteMayorCompra = document.getElementById("mainForm_lblDevolverClienteMayorCompra");
         this.lblDevolverContCliente = document.getElementById("mainForm_lblDevolverContCliente");
         this.btAgregar.onclick = () => this.ocultar();
-        this.vVenta.btAceptar.onclick = () => this.controlador.agregarVenta();
+        this.vVenta.btAceptar.onclick = () => this.controlador.agregarVenta1();
         this.mostrar();
         this.btAceptar = document.getElementById("mainForm_btAceptar");
 
         this.btAceptar.onclick = () =>
-            controlador.agregarTienda({
-              montoCaja: this.inMontoCaja.value,
-              porcIncremento: this.inPorcIncremento.value
+            this.controlador.agregarTienda({
+              montoCaja: this.montoCaja.value,
+              porcIncremento: this.porcIncremento.value,
             });
     
           
-        /// pipipipipipipipipipipipipipipipipi
+        
         
     
     }

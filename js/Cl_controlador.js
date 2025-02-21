@@ -3,7 +3,7 @@ export default class Cl_controlador {
         this.modelo = modelo;
         this.vista = vista;
     }
-    agregarVenta(){
+    agregarVenta1(){
         this.modelo.procesarVenta(this.vista.agregarVenta());
         this.vista.reportarVenta(this.modelo.montoFinalCaja(), 
         this.modelo.devolverClienteMayorCompra(), 
@@ -11,9 +11,9 @@ export default class Cl_controlador {
     );
 
     }
-    agregarVenta({montoCaja, porcIncremento}){
-        this.mVenta.montoCaja = montoCaja;
-        this.mVenta.porcIncremento = porcIncremento;
+    agregarTienda({montoCaja, porcIncremento}){
+        this.modelo.montoCaja = montoCaja;
+        this.modelo.porcIncremento = porcIncremento;
     }
 
 
